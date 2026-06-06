@@ -577,67 +577,42 @@ img {
     color: var(--clr-slate);
 }
 
-/* Team Section */
-.team__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
+/* Attribution Section */
+.attribution {
+    background-color: var(--clr-off-white);
+    border-top: 1px solid var(--clr-border);
 }
 
-.team-card {
-    background-color: var(--clr-white);
-    border: 1px solid var(--clr-border);
-    overflow: hidden;
+.attribution__text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--clr-slate);
+}
+
+.attribution__link {
+    color: var(--clr-navy);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.attribution__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-gold);
     transition: var(--transition-base);
 }
 
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--clr-gold-light);
-}
-
-.team-card__img-wrapper {
-    height: 300px;
-    overflow: hidden;
-    background-color: var(--clr-off-white);
-}
-
-.team-card__img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.team-card__info {
-    padding: var(--space-md);
-    text-align: center;
-}
-
-.team-card__name {
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;
-}
-
-.team-card__role {
-    color: var(--clr-slate);
-    font-size: 0.9rem;
-    margin-bottom: var(--space-sm);
-}
-
-.team-card__socials {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.team-card__socials a {
-    color: var(--clr-slate);
-    font-size: 1.1rem;
-}
-
-.team-card__socials a:hover {
+.attribution__link:hover {
     color: var(--clr-gold);
+}
+
+.attribution__link:hover::after {
+    width: 100%;
 }
 
 /* Footer & Contact */
@@ -717,10 +692,6 @@ img {
     .about__grid, .footer__grid {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
-    }
-    
-    .team__grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
