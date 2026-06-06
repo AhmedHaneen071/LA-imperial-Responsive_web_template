@@ -577,42 +577,20 @@ img {
     color: var(--clr-slate);
 }
 
-/* Attribution Section */
-.attribution {
-    background-color: var(--clr-off-white);
-    border-top: 1px solid var(--clr-border);
-}
-
-.attribution__text {
-    font-size: 1.1rem;
-    font-weight: 500;
+.footer__attribution {
+    font-size: 0.9rem;
     color: var(--clr-slate);
+    margin-top: 0.5rem;
 }
 
-.attribution__link {
+.footer__attribution a {
     color: var(--clr-navy);
     font-weight: 700;
-    position: relative;
-    padding-bottom: 2px;
+    transition: var(--transition-fast);
 }
 
-.attribution__link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--clr-gold);
-    transition: var(--transition-base);
-}
-
-.attribution__link:hover {
+.footer__attribution a:hover {
     color: var(--clr-gold);
-}
-
-.attribution__link:hover::after {
-    width: 100%;
 }
 
 /* Footer & Contact */
